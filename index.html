@@ -5,11 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abhishek Mali - Portfolio</title>
+
+    <!-- Link to external CSS and JS files -->
     <link rel="stylesheet" href="style.css" />
     <script defer src="javascript.js"></script>
 </head>
 
 <body>
+    <!-- Header section with logo, nav, and social links -->
     <header>
         <div class="logo">&lt;/&gt;</div>
         <nav>
@@ -17,8 +20,6 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">My Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="social-icons">
@@ -31,42 +32,47 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
             <h1>Hi, I'm Abhishek Mali</h1>
-            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">a passionate Computer Science
-                Engineering student with a keen interest in technology, software development, and building innovative
-                digital solutions. Welcome to my portfolio!</p>
+            <!-- Typing effect handled via JS -->
+            <p id="typing-text"></p>
+
+            <!-- Action buttons -->
             <div class="button-group">
-                <button class="btn hire-btn primary">Hire Me</button>
                 <button class="btn download-btn secondary">Download Resume</button>
             </div>
         </div>
+
+        <!-- Profile photo -->
         <div class="hero-image">
-            <img src="" alt="Profile Photo" />
+            <img src="myimage.jpg" alt="Profile Photo" />
         </div>
     </section>
 
+    <!-- About Me Section -->
     <section id="about">
         <div class="about-text">
             <h2>About Me</h2>
-            <p style="font-size: 20px;">I’m a passionate and driven Web Development enthusiast with a strong foundation
-                in core programming languages including <span style="font-size: 30px;"> C, Python, Java, and C++.</span>
-                With a deep curiosity for technology and a commitment to continuous learning, I thrive on building
-                dynamic, user-friendly websites and solving complex coding challenges. <br>
+            <p style="font-size: 20px;">
+                I’m a passionate and driven Web Development enthusiast with a strong foundation
+                in core programming languages including
+                <span style="font-size: 30px;"> C, Python, Java, and C++.</span> <br><br>
 
-                From front-end design to back-end logic, I love bringing digital ideas to life. Whether it's crafting
-                responsive layouts, optimizing code performance, or exploring new frameworks, I’m always eager to push
-                boundaries and create impactful digital experiences. <br>
+                From front-end design to back-end logic, I love bringing digital ideas to life.
+                Whether it's crafting responsive layouts, optimizing code performance, or exploring
+                new frameworks, I’m always eager to push boundaries and create impactful digital experiences. <br><br>
 
-                Alongside web development, I also engage in systems programming and software development—ensuring I
-                remain versatile and adaptable in the ever-evolving tech landscape. <br>
+                Alongside web development, I also engage in systems programming and software development. <br><br>
 
-                Currently pursuing a degree in <sup
-                    style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 30px;">
-                    Computer Science Engineering</sup>, I’m on a journey to become a full-stack developer, while also
-                diving deeper into open-source contributions, project collaborations, and real-world applications of
-                emerging tech. <br></p>
+                Currently pursuing a degree in 
+                <sup style="font-family: Cambria, serif; font-size: 30px;">
+                    Computer Science Engineering
+                </sup>, I’m on a journey to become a full-stack developer.
+            </p>
+
+            <!-- Contact Info -->
             <ul class="bio-info">
                 <li><strong>Email:</strong> abhishekanandmali.official@mail.com</li>
                 <li><strong>Phone:</strong> +91 6361421849</li>
@@ -74,42 +80,48 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services">
-        <h2>My Services</h2>
+        <h2 style="color: white;">My Services</h2>
         <div class="skills">
             <div class="skill">Web Development</div>
             <div class="skill">Research & Analysis</div>
+            <div class="skill">Software Development</div>
+            <div class="skill">Mobile App Development</div>
+            <div class="skill">Data Analysis</div>
+            <div class="skill">IT Support</div>
         </div>
     </section>
 
-    <section id="portfolio">
-        <h2>My Projects</h2>
-        <div class="portfolio-grid">
-            <img src="https://via.placeholder.com/200" alt="work">
-            <img src="https://via.placeholder.com/200" alt="work">
-            <img src="https://via.placeholder.com/200" alt="work">
-            <img src="https://via.placeholder.com/200" alt="work">
-            <img src="https://via.placeholder.com/200" alt="work">
-            <img src="https://via.placeholder.com/200" alt="work">
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button class="btn primary" type="submit">Send Message</button>
-        </form>
-    </section>
-
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
+            <h2>Contact Me</h2>
+            <p>
+                Email: abhishekanandmali.official@gmail.com<br>
+                Phone: 6361421849
+            </p>
             <p>&copy; 2025 Portfolio. All Rights Reserved.</p>
             <p>Design by Abhishek Mali</p>
         </div>
     </footer>
+
+    <!-- Inline JS for typing animation (safe to leave here) -->
+    <script>
+        const text = "Hi, I'm Abhishek — a passionate Computer Science Engineering student with a keen interest in technology, software development, and building innovative digital solutions. Welcome to my portfolio!";
+        const typingElement = document.getElementById("typing-text");
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                typingElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 90); // Typing speed
+            }
+        }
+
+        window.addEventListener("load", typeWriter);
+    </script>
 </body>
 
 </html>
