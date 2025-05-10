@@ -1,22 +1,20 @@
-/* Reset & Base Styles */
+
+/* Reset & base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff;
 }
-
 a {
     text-decoration: none;
     color: inherit;
 }
-
 ul {
     list-style: none;
 }
@@ -41,27 +39,22 @@ header {
     font-size: 2rem;
     color: white;
 }
-
 nav ul {
     display: flex;
     gap: 1.5rem;
     color: white;
 }
-
 nav a:hover {
     color: #00d084;
 }
-
 .social-icons a {
     margin-left: 15px;
 }
-
 .social-logo {
     width: 25px;
     height: 25px;
     transition: transform 0.3s ease;
 }
-
 .social-icons a:first-child {
     margin-left: 0;
 }
@@ -69,33 +62,34 @@ nav a:hover {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 5rem 11rem 6rem;
+    padding: 4rem 2rem;
     background-image: url(background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
     min-height: 70vh;
+    color: white;
+    text-align: center;
 }
 
 .hero-text {
+    flex: 1 1 100%;
     max-width: 600px;
-    flex-grow: 1;
-    margin-right: 40px;
-    word-wrap: break-word;
+    margin-bottom: 2rem;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     animation: fadeInText 1.5s ease-out;
 }
 
 .hero-text p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
     line-height: 1.6;
     color: #fff;
@@ -123,6 +117,8 @@ nav a:hover {
 
 .button-group {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -137,18 +133,35 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
+.hire-btn {
+    background-color: #00d084;
+    color: white;
+}
+
+.hire-btn:hover {
+    background-color: #00b971;
+}
+
 .download-btn {
-    background-color: skyblue;
+    background-color: #f4a261;
     color: white;
 }
 
 .download-btn:hover {
-    background-color: skyblue;
+    background-color: #e07b47;
+}
+
+.hero-image {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-image img {
-    width: 300px;
-    margin-top: 20px;
+    width: 250px;
+    max-width: 90%;
+    height: auto;
+    margin-top: 1rem;
     border-radius: 12px;
     border: 4px solid transparent;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
@@ -163,11 +176,8 @@ nav a:hover {
     justify-content: center;
     color: white;
     background-color: black;
-    border: 3px solid #ffffff;
-    background-image: url(aboutme.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    border: 3px solid #ffffff; 
+    background-image: url(aboutme.jpg); 
 }
 
 .about-text {
@@ -226,80 +236,46 @@ footer {
     padding: 2rem;
 }
 
-/* ---------- Responsive Design for Mobile ---------- */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 2rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0.8rem;
-        margin-top: 0.5rem;
-    }
-
-    .social-icons {
-        margin-top: 0.5rem;
-    }
-
-    .hero {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-
-    .hero-text {
-        margin: 0;
-        max-width: 100%;
-    }
-
+/* Responsive Styling */
+@media (max-width: 600px) {
     .hero-text h1 {
         font-size: 2rem;
     }
 
     .hero-text p {
-        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
     }
 
     .button-group {
         flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-    .hero-image img {
-        width: 70%;
-        margin-top: 1.5rem;
-    }
-
-    #about {
-        padding: 2rem 1rem;
-        flex-direction: column;
-    }
-
-    .about-text {
-        padding: 0 1rem;
-    }
-
-    #services {
-        padding: 2rem 1rem;
-    }
-
-    .skills {
-        flex-direction: column;
-        align-items: center;
     }
 
     .skill {
-        width: 80%;
-        padding: 20px;
+        width: 90%;
+        padding: 1.2rem;
+    }
+
+    #about, #services {
+        padding: 2rem 1rem;
     }
 
     footer {
-        padding: 1.5rem;
-        font-size: 14px;
+        padding: 1.5rem 1rem;
     }
 }
