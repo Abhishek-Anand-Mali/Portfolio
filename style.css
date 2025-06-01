@@ -174,10 +174,9 @@ nav a:hover {
     padding: 60px 20px;
     display: flex;
     justify-content: center;
-    color: white;
-    background-color: black;
+    color: black;
     border: 3px solid #ffffff; 
-    background-image: url(aboutme.jpg); 
+    background-color: white; 
 }
 
 .about-text {
@@ -194,7 +193,7 @@ nav a:hover {
 
 /* Services Section */
 #services {
-    background-image: url(myservice.jpg);
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 4rem 2rem;
