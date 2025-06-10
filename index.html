@@ -5,91 +5,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Mali - Portfolio</title>
-
-    <!-- Link to external CSS and JS files -->
     <link rel="stylesheet" href="style.css" />
-    <script defer src="javascript.js"></script>
 </head>
 
 <body>
-    <!-- Header section with logo, nav, and social links -->
+    <!-- Header -->
     <header>
         <div class="logo">&lt;/&gt;</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
             </ul>
         </nav>
-        <div class="social-icons">
-            <a href="https://github.com/Abhishek-Anand-Mali" target="_blank" title="GitHub">
-                <img src="github.png" alt="GitHub" class="social-logo">
-            </a>
-            <a href="https://linkedin.com/in/abhishek-mali-40263b332" target="_blank" title="LinkedIn">
-                <img src="linkedin.jpg" alt="LinkedIn" class="social-logo">
-            </a>
-        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-text">
             <h1>Hi, I'm Abhishek Mali</h1>
-            <!-- Typing effect handled via JS -->
-            <p id="typing-text"></p>
-
-            <!-- Action buttons -->
-            <div class="button-group">
-                <button class="btn download-btn secondary">Download Resume</button>
+            <h3>
+                A passionate Computer Science Engineering student exploring technology, software development, and
+                digital innovation.
+            </h3>
+            <div class="social-icons">
+                <a href="https://github.com/Abhishek-Anand-Mali" target="_blank" title="GitHub">
+                    <img src="github.png" alt="GitHub" class="social-logo">
+                </a>
+                <a href="https://linkedin.com/in/abhishek-mali-40263b332" target="_blank" title="LinkedIn">
+                    <img src="linkedin.jpg" alt="LinkedIn" class="social-logo">
+                </a>
             </div>
-        </div>
-
-        <!-- Profile photo -->
-        <div class="hero-image">
-            <img src="" alt="Profile Photo" />
         </div>
     </section>
 
-    <!-- About Me Section -->
+    <!-- About Section -->
     <section id="about">
         <div class="about-text">
             <h2>About Me</h2>
-            <p style="font-size: 20px;">
-                I’m a passionate and driven Web Development enthusiast with a strong foundation
-                in core programming languages including
-                <span style="font-size: 30px;"> C, Python, Java, and C++.</span> <br><br>
+            <p>
+                I am a third‑year Computer Science Engineering student with a solid technical foundation in Java, C, and
+                web development. Skilled in designing efficient algorithms and writing clean, maintainable code, I apply
+                these strengths to backend systems as well as user-facing web applications.
 
-                From front-end design to back-end logic, I love bringing digital ideas to life.
-                Whether it's crafting responsive layouts, optimizing code performance, or exploring
-                new frameworks, I’m always eager to push boundaries and create impactful digital experiences. <br><br>
+                On the frontend, I build responsive and accessible web interfaces using current technologies and frameworks. Concurrently, I enhance backend logic through systems programming and full-stack development, ensuring seamless integration and performance. <br>
 
-                Alongside web development, I also engage in systems programming and software development. <br><br>
+                My ongoing academic coursework and personal projects sharpen my skills and deepen my understanding of software engineering principles.  <br>
+                
+                I am committed to continuous learning and aspire to become a full-stack
+                developer, capable of delivering end-to-end solutions with both technical depth and user-focused design. <br>
 
-                Currently pursuing a degree in
-                <sup style="font-family: Cambria, serif; font-size: 30px;">
-                    Computer Science Engineering
-                </sup>, I’m on a journey to become a full-stack developer.
+                I welcome opportunities for collaboration, internships, and professional growth—let’s connect to explore
+                how we can work together.
             </p>
 
-            <!-- Contact Info -->
             <ul class="bio-info">
                 <li><strong>Email:</strong> abhishekanandmali.official@mail.com</li>
                 <li><strong>Phone:</strong> +91 6361421849</li>
             </ul>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <h2 style="color: white;">My Services</h2>
-        <div class="skills">
-            <div class="skill">Web Development</div>
-            <div class="skill">Research & Analysis</div>
-            <div class="skill">Software Development</div>
-            <div class="skill">Mobile App Development</div>
-            <div class="skill">Data Analysis</div>
-            <div class="skill">IT Support</div>
         </div>
     </section>
 
@@ -105,23 +78,6 @@
             <p>Design by Abhishek Mali</p>
         </div>
     </footer>
-
-    <!-- Inline JS for typing animation (safe to leave here) -->
-    <script>
-        const text = "Hi, I'm Abhishek — a passionate Computer Science Engineering student with a keen interest in technology, software development, and building innovative digital solutions. Welcome to my portfolio!";
-        const typingElement = document.getElementById("typing-text");
-        let i = 0;
-
-        function typeWriter() {
-            if (i < text.length) {
-                typingElement.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 90); // Typing speed
-            }
-        }
-
-        window.addEventListener("load", typeWriter);
-    </script>
 </body>
 
 </html>
